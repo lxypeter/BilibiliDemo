@@ -51,6 +51,35 @@
     [self menuViewSetting];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+//    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+//    
+//    UIView *launchView = viewController.view;
+//    UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
+//    [mainWindow addSubview:launchView];
+//    
+//    UIImageView *bgView = [launchView viewWithTag:-11];
+//    [bgView mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.mas_equalTo(0);
+//    }];
+//    
+//    CGFloat ratio = 841.0/640.0;
+//    CGFloat imageViewX = (ScreenWidth - 120)/2;
+//    CGFloat imageViewY = 100;
+//    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(imageViewX, imageViewY, 120, 120*ratio)];
+//    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"bilibili_splash_default@2x" ofType:@"png"];
+//    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+//    imageView.image = image;
+//    [launchView addSubview:imageView];
+//    
+//    [UIView animateWithDuration:1.0f delay:0.5f options:0 animations:^{
+//        imageView.transform = CGAffineTransformScale(imageView.transform, 2, 2);
+//    } completion:^(BOOL finished) {
+//        [launchView removeFromSuperview];
+//    }];
+}
+
 #pragma mark - 设置导航栏
 -(void)setNavigationBar{
     
