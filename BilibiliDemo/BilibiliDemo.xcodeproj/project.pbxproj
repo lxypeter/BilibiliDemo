@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E120E5C61CB2114E00DBE93B /* FocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E120E5C51CB2114E00DBE93B /* FocusViewController.m */; };
 		E178DD0E1CABA3B300E47B6E /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E178DD0B1CABA3B300E47B6E /* NSString+Category.m */; };
 		E178DD0F1CABA3B300E47B6E /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E178DD0D1CABA3B300E47B6E /* UIColor+Category.m */; };
 		E17AD3521C98F94F00BA773F /* BilibiliDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AD3511C98F94F00BA773F /* BilibiliDemoTests.m */; };
@@ -30,6 +31,7 @@
 		E1B530221CAA7DA7004DB37B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B530211CAA7DA7004DB37B /* BaseViewController.m */; };
 		E1B5302D1CAA837A004DB37B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B5302C1CAA837A004DB37B /* MBProgressHUD.m */; };
 		E1CF2F951CB0E904002F3A9E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF2F941CB0E904002F3A9E /* DetailViewController.m */; };
+		E1CF2F991CB111E8002F3A9E /* CYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF2F981CB111E8002F3A9E /* CYSegmentBar.m */; };
 		E1EDB7C91CACD0FF00D29111 /* bilibili_splash_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EDB7C11CACD0FF00D29111 /* bilibili_splash_default@2x.png */; };
 		E1EDB7CA1CACD0FF00D29111 /* bilibili_splash_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EDB7C21CACD0FF00D29111 /* bilibili_splash_default@3x.png */; };
 		E1EDB7CB1CACD0FF00D29111 /* bilibili_splash_ipad_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EDB7C31CACD0FF00D29111 /* bilibili_splash_ipad_bg.png */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E120E5C41CB2114E00DBE93B /* FocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusViewController.h; sourceTree = "<group>"; };
+		E120E5C51CB2114E00DBE93B /* FocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusViewController.m; sourceTree = "<group>"; };
 		E178DD071CAB773900E47B6E /* MainMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMacro.h; sourceTree = "<group>"; };
 		E178DD081CAB77E700E47B6E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E178DD0A1CABA3B300E47B6E /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 		E1B5302C1CAA837A004DB37B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		E1CF2F931CB0E904002F3A9E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		E1CF2F941CB0E904002F3A9E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E1CF2F971CB111E8002F3A9E /* CYSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSegmentBar.h; sourceTree = "<group>"; };
+		E1CF2F981CB111E8002F3A9E /* CYSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSegmentBar.m; sourceTree = "<group>"; };
 		E1EDB7C11CACD0FF00D29111 /* bilibili_splash_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_default@2x.png"; sourceTree = "<group>"; };
 		E1EDB7C21CACD0FF00D29111 /* bilibili_splash_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili_splash_default@3x.png"; sourceTree = "<group>"; };
 		E1EDB7C31CACD0FF00D29111 /* bilibili_splash_ipad_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bilibili_splash_ipad_bg.png; sourceTree = "<group>"; };
@@ -132,6 +138,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E120E5C11CB2111500DBE93B /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				E120E5C21CB2113300DBE93B /* Controller */,
+				E120E5C31CB2113300DBE93B /* View */,
+			);
+			path = Focus;
+			sourceTree = "<group>";
+		};
+		E120E5C21CB2113300DBE93B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E120E5C41CB2114E00DBE93B /* FocusViewController.h */,
+				E120E5C51CB2114E00DBE93B /* FocusViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E120E5C31CB2113300DBE93B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E172593A1C992EE9007DF789 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +250,7 @@
 		E1B52FE01CAA7BEB004DB37B /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E120E5C11CB2111500DBE93B /* Focus */,
 				E1CF2F921CB0E904002F3A9E /* Detail */,
 				E1A2E5B21CACF97800FF4695 /* Main */,
 			);
@@ -269,6 +301,7 @@
 		E1B52FF91CAA7D16004DB37B /* MyLib */ = {
 			isa = PBXGroup;
 			children = (
+				E1CF2F961CB111CB002F3A9E /* CYSegmentBar */,
 				E1B5301F1CAA7DA7004DB37B /* BaseController */,
 			);
 			path = MyLib;
@@ -340,6 +373,15 @@
 				E1CF2F941CB0E904002F3A9E /* DetailViewController.m */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		E1CF2F961CB111CB002F3A9E /* CYSegmentBar */ = {
+			isa = PBXGroup;
+			children = (
+				E1CF2F971CB111E8002F3A9E /* CYSegmentBar.h */,
+				E1CF2F981CB111E8002F3A9E /* CYSegmentBar.m */,
+			);
+			path = CYSegmentBar;
 			sourceTree = "<group>";
 		};
 		E1EDB7C01CACD0FF00D29111 /* Launch */ = {
@@ -481,9 +523,11 @@
 				E1B5301B1CAA7D16004DB37B /* NSArray+MASAdditions.m in Sources */,
 				E1B52FF41CAA7BEB004DB37B /* main.m in Sources */,
 				E1B530221CAA7DA7004DB37B /* BaseViewController.m in Sources */,
+				E120E5C61CB2114E00DBE93B /* FocusViewController.m in Sources */,
 				E1B5302D1CAA837A004DB37B /* MBProgressHUD.m in Sources */,
 				E1B530181CAA7D16004DB37B /* MASLayoutConstraint.m in Sources */,
 				E1B52FF11CAA7BEB004DB37B /* AppDelegate.m in Sources */,
+				E1CF2F991CB111E8002F3A9E /* CYSegmentBar.m in Sources */,
 				E1CF2F951CB0E904002F3A9E /* DetailViewController.m in Sources */,
 				E1B5301E1CAA7D16004DB37B /* ViewController+MASAdditions.m in Sources */,
 				E1A2E5B61CACF9F000FF4695 /* CYTabBarController.m in Sources */,

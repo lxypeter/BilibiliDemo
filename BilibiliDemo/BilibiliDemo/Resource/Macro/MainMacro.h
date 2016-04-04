@@ -61,6 +61,8 @@
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 #define UICOLOR(A)  [UIColor colorWithHexString:A]
 
+#define kPinkColor UICOLOR(@"#DD859F")
+#define kTextGrayColor UICOLOR(@"#969696")
 
 #pragma mark - 图片相关
 //读取本地图片
@@ -71,12 +73,6 @@
 
 //定义UIImage对象
 #define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]
-
-//建议使用前两种宏定义,性能高于后者
-
-
-
-
 
 
 #pragma mark - 字体相关
@@ -99,13 +95,5 @@
 #define kLabelTextBorderSpace_40 40
 #define kLabelTextBorderSpace_45 45
 #define kLabelTextBorderSpace_50 50
-
-#pragma mark - 列表菜单
-
-//菜单信息
-#define kMenuName @"kMenuName"  //名称
-#define kMenuUrl @"kMenuUrl"        //跳转页面
-#define kMenuIcon @"kMenuIcon"      //图标
-#define kMenuSubtitle @"kMenuSubtitle" //附标题
 
 #endif /* MainMacro_h */
