@@ -64,7 +64,7 @@
     imageView.image = image;
     [launchView addSubview:imageView];
     
-    [UIView animateWithDuration:1.0f delay:0.5f options:0 animations:^{
+    [UIView animateWithDuration:1.0f animations:^{
         imageView.transform = CGAffineTransformScale(imageView.transform, 2, 2);
     } completion:^(BOOL finished) {
         [launchView removeFromSuperview];

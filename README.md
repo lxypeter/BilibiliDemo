@@ -10,3 +10,7 @@ Bilibili视频内页的实现
 1、项目架构调整
 2、新增启动页面动画效果
 3、自定义TabBarController
+
+4月4日更新：
+1、关注页面构建
+2、CYSegmentBar封装，支持选中条滚动
