@@ -51,35 +51,6 @@
     [self menuViewSetting];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    
-//    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
-//    
-//    UIView *launchView = viewController.view;
-//    UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
-//    [mainWindow addSubview:launchView];
-//    
-//    UIImageView *bgView = [launchView viewWithTag:-11];
-//    [bgView mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.mas_equalTo(0);
-//    }];
-//    
-//    CGFloat ratio = 841.0/640.0;
-//    CGFloat imageViewX = (ScreenWidth - 120)/2;
-//    CGFloat imageViewY = 100;
-//    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(imageViewX, imageViewY, 120, 120*ratio)];
-//    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"bilibili_splash_default@2x" ofType:@"png"];
-//    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
-//    imageView.image = image;
-//    [launchView addSubview:imageView];
-//    
-//    [UIView animateWithDuration:1.0f delay:0.5f options:0 animations:^{
-//        imageView.transform = CGAffineTransformScale(imageView.transform, 2, 2);
-//    } completion:^(BOOL finished) {
-//        [launchView removeFromSuperview];
-//    }];
-}
-
 #pragma mark - 设置导航栏
 -(void)setNavigationBar{
     
@@ -127,13 +98,13 @@
     
     UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
-    effectview.frame = self.videoCoverImageView.bounds;
+    effectview.frame = CGRectMake(0, 0, ScreenWidth, self.videoCoverImageView.bounds.size.height);
     effectview.alpha = 0.3;
     [self.videoCoverImageView addSubview:effectview];
     
     UIBlurEffect *blur2 = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectview2 = [[UIVisualEffectView alloc] initWithEffect:blur2];
-    effectview2.frame = self.videoCoverImageView.bounds;
+    effectview2.frame = CGRectMake(0, 0, ScreenWidth, self.videoCoverImageView.bounds.size.height);
     effectview2.alpha = 0;
     self.videoCoverImageBlurView = effectview2;
     [self.videoCoverImageView addSubview:effectview2];
@@ -148,7 +119,7 @@
     [self.commentButton addTarget:self action:@selector(menuButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     //初始化选中条
-    self.buttonSeletedBar = [[UIView alloc]initWithFrame:CGRectMake(self.briefButton.frame.origin.x, self.menuView.frame.size.height-2, self.briefButton.frame.size.width, 2)];
+    self.buttonSeletedBar = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth/2 - 100, self.menuView.frame.size.height-2, self.briefButton.frame.size.width, 2)];
     self.buttonSeletedBar.backgroundColor = [self.briefButton titleColorForState:UIControlStateNormal];
     [self.menuView addSubview:self.buttonSeletedBar];
     
