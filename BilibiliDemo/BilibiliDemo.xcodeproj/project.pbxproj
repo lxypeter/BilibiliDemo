@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E120E5C61CB2114E00DBE93B /* FocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E120E5C51CB2114E00DBE93B /* FocusViewController.m */; };
+		E125A88C1CB4E0DD00B346D9 /* FocusTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = E125A88B1CB4E0DD00B346D9 /* FocusTagView.m */; };
+		E1466C8E1CB3AE970061F506 /* RoundTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1466C8D1CB3AE970061F506 /* RoundTagButton.m */; };
 		E178DD0E1CABA3B300E47B6E /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E178DD0B1CABA3B300E47B6E /* NSString+Category.m */; };
 		E178DD0F1CABA3B300E47B6E /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E178DD0D1CABA3B300E47B6E /* UIColor+Category.m */; };
 		E17AD3521C98F94F00BA773F /* BilibiliDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AD3511C98F94F00BA773F /* BilibiliDemoTests.m */; };
@@ -56,6 +58,10 @@
 /* Begin PBXFileReference section */
 		E120E5C41CB2114E00DBE93B /* FocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusViewController.h; sourceTree = "<group>"; };
 		E120E5C51CB2114E00DBE93B /* FocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusViewController.m; sourceTree = "<group>"; };
+		E125A88A1CB4E0DD00B346D9 /* FocusTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusTagView.h; sourceTree = "<group>"; };
+		E125A88B1CB4E0DD00B346D9 /* FocusTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusTagView.m; sourceTree = "<group>"; };
+		E1466C8C1CB3AE970061F506 /* RoundTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundTagButton.h; sourceTree = "<group>"; };
+		E1466C8D1CB3AE970061F506 /* RoundTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundTagButton.m; sourceTree = "<group>"; };
 		E178DD071CAB773900E47B6E /* MainMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMacro.h; sourceTree = "<group>"; };
 		E178DD081CAB77E700E47B6E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E178DD0A1CABA3B300E47B6E /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
@@ -159,6 +165,10 @@
 		E120E5C31CB2113300DBE93B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1466C8C1CB3AE970061F506 /* RoundTagButton.h */,
+				E1466C8D1CB3AE970061F506 /* RoundTagButton.m */,
+				E125A88A1CB4E0DD00B346D9 /* FocusTagView.h */,
+				E125A88B1CB4E0DD00B346D9 /* FocusTagView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -527,6 +537,7 @@
 				E1B5302D1CAA837A004DB37B /* MBProgressHUD.m in Sources */,
 				E1B530181CAA7D16004DB37B /* MASLayoutConstraint.m in Sources */,
 				E1B52FF11CAA7BEB004DB37B /* AppDelegate.m in Sources */,
+				E125A88C1CB4E0DD00B346D9 /* FocusTagView.m in Sources */,
 				E1CF2F991CB111E8002F3A9E /* CYSegmentBar.m in Sources */,
 				E1CF2F951CB0E904002F3A9E /* DetailViewController.m in Sources */,
 				E1B5301E1CAA7D16004DB37B /* ViewController+MASAdditions.m in Sources */,
@@ -536,6 +547,7 @@
 				E1F42F791CAE70F7004960AC /* CYTabBar.m in Sources */,
 				E1B530161CAA7D16004DB37B /* MASConstraint.m in Sources */,
 				E1B530171CAA7D16004DB37B /* MASConstraintMaker.m in Sources */,
+				E1466C8E1CB3AE970061F506 /* RoundTagButton.m in Sources */,
 				E178DD0E1CABA3B300E47B6E /* NSString+Category.m in Sources */,
 				E178DD0F1CABA3B300E47B6E /* UIColor+Category.m in Sources */,
 			);

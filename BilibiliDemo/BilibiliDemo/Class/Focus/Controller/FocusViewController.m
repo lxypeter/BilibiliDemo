@@ -8,6 +8,7 @@
 
 #import "FocusViewController.h"
 #import "CYSegmentBar.h"
+#import "FocusTagView.h"
 
 @interface FocusViewController ()<CYSegmentBarDelegate,UIScrollViewDelegate>
 
@@ -30,9 +31,10 @@
     
     //标题栏
     self.segmentBar = [[CYSegmentBar alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth *0.5, 44) titles:@[@"追番",@"动态",@"标签"] validWidth:0];
-    self.segmentBar.font = kFont_13;
+    self.segmentBar.font = kFont_15;
     self.segmentBar.selectedColor = kPinkColor;
     self.segmentBar.unselectedColor = kTextGrayColor;
+    self.segmentBar.selectedIndex = 1;
     self.segmentBar.delegate = self;
     self.navigationItem.titleView = self.segmentBar;
     
@@ -64,7 +66,9 @@
     
     //标签页面
     UIView *tagContainer = [[UIView alloc]initWithFrame:CGRectMake( ScreenWidth * 2, 0, ScreenWidth, scrollHeight)];
-    tagContainer.backgroundColor = [UIColor blueColor];
+    FocusTagView *focusTagView = [[FocusTagView alloc]initWithFrame:tagContainer.bounds];
+    focusTagView.tagArray = @[@"手办模型",@"舞蹈MMD",@"原创音乐",@"动漫杂谈",@"架子鼓",@"LOVELIVE",@"技术宅",@"金坷垃",@"MINECRAFT",@"梁非凡",@"坦克世界",@"VOCALOID",@"言和",@"剧情MMD",@"AMV",@"教程",@"剑网三",@"音MAD",@"ACG配音",@"手书",@"DIY",@"静止系MAD",@"洛天依",@"治愈向"];
+    [tagContainer addSubview:focusTagView];
     [self.scrollView addSubview:tagContainer];
     
 }

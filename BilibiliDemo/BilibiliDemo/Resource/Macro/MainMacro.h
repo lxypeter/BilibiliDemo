@@ -61,7 +61,7 @@
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 #define UICOLOR(A)  [UIColor colorWithHexString:A]
 
-#define kPinkColor UICOLOR(@"#DD859F")
+#define kPinkColor UICOLOR(@"#EA7B9A")
 #define kTextGrayColor UICOLOR(@"#969696")
 
 #pragma mark - 图片相关
