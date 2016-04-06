@@ -14,3 +14,7 @@ Bilibili视频内页的实现
 4月4日更新：
 1、关注页面构建
 2、CYSegmentBar封装，支持选中条滚动
+
+4月6日更新：
+1、关注页面_标签页实现
+![image](https://raw.githubusercontent.com/lxypeter/BilibiliDemo/master/focusView_tag.gif)
