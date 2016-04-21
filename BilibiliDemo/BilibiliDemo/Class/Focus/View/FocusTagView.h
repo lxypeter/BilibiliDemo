@@ -16,12 +16,12 @@ typedef void (^ButtonClickBlock) ();
 
 @interface FocusTagView : UIView
 
-@property (nonatomic,copy) NSArray *tagArray;
+@property (nonatomic, copy) NSArray *tagArray;
 
 //预留刷新按钮点击Block
-@property (nonatomic,copy) ButtonClickBlock refreshButtonBlock;
+@property (nonatomic, copy) ButtonClickBlock refreshButtonBlock;
 
 //预留关注按钮点击Block
-@property (nonatomic,copy) ButtonClickBlock focusButtonBlock;
+@property (nonatomic, copy) ButtonClickBlock focusButtonBlock;
 
 @end
