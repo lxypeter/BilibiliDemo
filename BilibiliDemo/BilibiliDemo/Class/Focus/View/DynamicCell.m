@@ -9,6 +9,7 @@
 #import "DynamicCell.h"
 #import "UIImageView+WebCache.h"
 #import "VideoInfo.h"
+#import "UIImageView+MaskCorner.h"
 
 @interface DynamicCell ()
 
