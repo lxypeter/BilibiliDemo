@@ -20,5 +20,5 @@ Bilibili视频内页的实现
 ![image](https://raw.githubusercontent.com/lxypeter/BilibiliDemo/master/focusView_tag.gif)
 
 ###4月21日更新
-1、关注页面一级页面基本实现
-2、修改视频详情页面push时透明导航栏展示问题
+1、关注页面一级页面基本实现<br>
+2、修改视频详情页面push时透明导航栏展示问题<br>
