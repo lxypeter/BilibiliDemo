@@ -51,6 +51,14 @@
     [self menuViewSetting];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [[[self.navigationController.navigationBar subviews]objectAtIndex:0] setAlpha:0];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [[[self.navigationController.navigationBar subviews]objectAtIndex:0] setAlpha:1];
+}
+
 #pragma mark - 设置导航栏
 -(void)setNavigationBar{
     
@@ -59,27 +67,27 @@
     titleLabel.font = [UIFont systemFontOfSize:13];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    [self.navigationController.navigationBar addSubview:titleLabel];
+    [self.view addSubview:titleLabel];
     self.titleLabel = titleLabel;
     
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.navigationController.navigationBar.mas_centerX);
-        make.centerY.equalTo(self.navigationController.navigationBar.mas_centerY);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.view.mas_top).offset(20);
         make.height.mas_equalTo(44);
         make.width.mas_equalTo(100);
     }];
-    
-    //透明底图实现navigationBar透明
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"clearbg"] forBarMetrics:UIBarMetricsDefault];
-    //去除底部黑线
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
     //设置后退按钮
     UIButton *backBtn = [[UIButton alloc] init];
     [backBtn setImage:[UIImage imageNamed:@"hd_idct_back"] forState:UIControlStateNormal];
     backBtn.bounds = CGRectMake(0, 0, 20, 20);
+    [backBtn addTarget:self action:@selector(backToLastController) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
+}
+
+- (void)backToLastController {
+    [self.navigationController popViewControllerAnimated: YES];
 }
 
 #pragma mark - tableView设置
