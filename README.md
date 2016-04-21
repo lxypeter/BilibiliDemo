@@ -1,9 +1,6 @@
 # BilibiliDemo
-Bilibili视频内页的实现
-
+Bilibili视频内页的实现<br>
 ![image](https://raw.githubusercontent.com/lxypeter/BilibiliDemo/master/biliDemoGif.gif)
-
-在用Bilibili IOS APP的时候发现它视频详情的页面非常有趣，就自己试着实现一下。
 
 ###4月3日更新
 开始逐渐实现整个APP各个页面<br>
