@@ -19,3 +19,4 @@ Bilibili视频内页的实现<br>
 ###4月21日更新
 1、关注页面一级页面基本实现<br>
 2、修改视频详情页面push时透明导航栏展示问题<br>
+3、为UIView及UIImageView新增Category。高效添加圆角效果，减少因`masksToBounds`产生的能耗<br>

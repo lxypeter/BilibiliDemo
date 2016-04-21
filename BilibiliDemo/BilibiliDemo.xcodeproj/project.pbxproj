@@ -56,6 +56,9 @@
 		E1C121501CC6269700CBF20A /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C1213E1CC6269700CBF20A /* UIImageView+HighlightedWebCache.m */; };
 		E1C121511CC6269700CBF20A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C121401CC6269700CBF20A /* UIImageView+WebCache.m */; };
 		E1C121521CC6269700CBF20A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C121421CC6269700CBF20A /* UIView+WebCacheOperation.m */; };
+		E1C96F541CC877C700F5DE81 /* UIView+MaskCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C96F531CC877C700F5DE81 /* UIView+MaskCorner.m */; };
+		E1C96F571CC8BBFE00F5DE81 /* UIImage+MaskCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C96F561CC8BBFE00F5DE81 /* UIImage+MaskCorner.m */; };
+		E1C96F5A1CC8C7B400F5DE81 /* UIImageView+MaskCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C96F591CC8C7B400F5DE81 /* UIImageView+MaskCorner.m */; };
 		E1CF2F951CB0E904002F3A9E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF2F941CB0E904002F3A9E /* DetailViewController.m */; };
 		E1CF2F991CB111E8002F3A9E /* CYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF2F981CB111E8002F3A9E /* CYSegmentBar.m */; };
 		E1EDB7C91CACD0FF00D29111 /* bilibili_splash_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EDB7C11CACD0FF00D29111 /* bilibili_splash_default@2x.png */; };
@@ -179,6 +182,12 @@
 		E1C121401CC6269700CBF20A /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		E1C121411CC6269700CBF20A /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		E1C121421CC6269700CBF20A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		E1C96F521CC877C700F5DE81 /* UIView+MaskCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MaskCorner.h"; sourceTree = "<group>"; };
+		E1C96F531CC877C700F5DE81 /* UIView+MaskCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MaskCorner.m"; sourceTree = "<group>"; };
+		E1C96F551CC8BBFE00F5DE81 /* UIImage+MaskCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MaskCorner.h"; sourceTree = "<group>"; };
+		E1C96F561CC8BBFE00F5DE81 /* UIImage+MaskCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MaskCorner.m"; sourceTree = "<group>"; };
+		E1C96F581CC8C7B400F5DE81 /* UIImageView+MaskCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MaskCorner.h"; sourceTree = "<group>"; };
+		E1C96F591CC8C7B400F5DE81 /* UIImageView+MaskCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MaskCorner.m"; sourceTree = "<group>"; };
 		E1CF2F931CB0E904002F3A9E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		E1CF2F941CB0E904002F3A9E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		E1CF2F971CB111E8002F3A9E /* CYSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSegmentBar.h; sourceTree = "<group>"; };
@@ -278,6 +287,12 @@
 				E178DD0B1CABA3B300E47B6E /* NSString+Category.m */,
 				E178DD0C1CABA3B300E47B6E /* UIColor+Category.h */,
 				E178DD0D1CABA3B300E47B6E /* UIColor+Category.m */,
+				E1C96F521CC877C700F5DE81 /* UIView+MaskCorner.h */,
+				E1C96F531CC877C700F5DE81 /* UIView+MaskCorner.m */,
+				E1C96F551CC8BBFE00F5DE81 /* UIImage+MaskCorner.h */,
+				E1C96F561CC8BBFE00F5DE81 /* UIImage+MaskCorner.m */,
+				E1C96F581CC8C7B400F5DE81 /* UIImageView+MaskCorner.h */,
+				E1C96F591CC8C7B400F5DE81 /* UIImageView+MaskCorner.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -688,8 +703,11 @@
 				E1C121481CC6269700CBF20A /* SDWebImageDecoder.m in Sources */,
 				E1B5302D1CAA837A004DB37B /* MBProgressHUD.m in Sources */,
 				E195D9BA1CC61CF2001D1EBD /* VideoInfo.m in Sources */,
+				E1C96F571CC8BBFE00F5DE81 /* UIImage+MaskCorner.m in Sources */,
 				E1B530181CAA7D16004DB37B /* MASLayoutConstraint.m in Sources */,
 				E1B52FF11CAA7BEB004DB37B /* AppDelegate.m in Sources */,
+				E1C96F5A1CC8C7B400F5DE81 /* UIImageView+MaskCorner.m in Sources */,
+				E1C96F541CC877C700F5DE81 /* UIView+MaskCorner.m in Sources */,
 				E125A88C1CB4E0DD00B346D9 /* FocusTagView.m in Sources */,
 				E1CF2F991CB111E8002F3A9E /* CYSegmentBar.m in Sources */,
 				E1CF2F951CB0E904002F3A9E /* DetailViewController.m in Sources */,
