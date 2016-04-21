@@ -99,12 +99,7 @@
 
 #pragma mark - 点击事件
 -(void)clickSegmentBtn:(UIButton *)btn{
-    
     [self selectBtn:btn];
-    //通知代理
-    if ([self.delegate respondsToSelector:@selector(cySegmentBar:indexOfSelectedSegment:)]) {
-        [self.delegate cySegmentBar:self indexOfSelectedSegment:btn.tag];
-    }
 }
 
 #pragma mark - 选中
@@ -129,6 +124,11 @@
         frame.origin.x = btn.frame.origin.x;
         self.selectedBar.frame = frame;
     }];
+    
+    //通知代理
+    if ([self.delegate respondsToSelector:@selector(cySegmentBar:indexOfSelectedSegment:)]) {
+        [self.delegate cySegmentBar:self indexOfSelectedSegment:btn.tag];
+    }
 }
 
 #pragma mark - 颜色设置

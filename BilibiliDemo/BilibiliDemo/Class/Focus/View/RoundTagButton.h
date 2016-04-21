@@ -10,6 +10,6 @@
 
 @interface RoundTagButton : UIButton
 
-+(RoundTagButton *)roundTagButtonWithTitle:(NSString *)title Color:(UIColor *)color Height:(CGFloat)height;
++ (RoundTagButton *)roundTagButtonWithTitle:(NSString *)title Color:(UIColor *)color Height:(CGFloat)height;
 
 @end

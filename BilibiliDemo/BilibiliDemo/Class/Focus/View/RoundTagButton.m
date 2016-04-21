@@ -10,7 +10,7 @@
 
 @implementation RoundTagButton
 
-+(RoundTagButton *)roundTagButtonWithTitle:(NSString *)title Color:(UIColor *)color Height:(CGFloat)height{
++ (RoundTagButton *)roundTagButtonWithTitle:(NSString *)title Color:(UIColor *)color Height:(CGFloat)height{
     
     UIFont *titleFont = [UIFont systemFontOfSize:14];
     CGFloat maxWidth = height * 2.5;

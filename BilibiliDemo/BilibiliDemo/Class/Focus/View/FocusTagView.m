@@ -11,11 +11,11 @@
 
 @implementation TagRefreshButton
 
--(CGRect)titleRectForContentRect:(CGRect)contentRect{
+- (CGRect)titleRectForContentRect:(CGRect)contentRect{
     return CGRectMake(0, 0, contentRect.size.width * 0.8, contentRect.size.height);
 }
 
--(CGRect)imageRectForContentRect:(CGRect)contentRect{
+- (CGRect)imageRectForContentRect:(CGRect)contentRect{
 
     return CGRectMake(contentRect.size.width * 0.8, (contentRect.size.height - 20)/2, 20, 20);
 }
@@ -36,7 +36,7 @@
 
 @implementation FocusTagView
 
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         [self initSubViews];
@@ -45,7 +45,7 @@
 }
 
 #pragma mark - 初始化页面
--(void)initSubViews{
+- (void)initSubViews{
     
     self.backgroundColor = UICOLOR(@"#F6F6F6");
     
@@ -117,7 +117,7 @@
 }
 
 #pragma mark - 刷新按钮点击
--(void)refreshButtonClicked:(TagRefreshButton *)btn{
+- (void)refreshButtonClicked:(TagRefreshButton *)btn{
     
     //动画效果
     CABasicAnimation *animation = [CABasicAnimation animation];
@@ -138,12 +138,12 @@
 }
 
 #pragma mark - 标签按钮点击
--(void)tagButtonClick:(RoundTagButton *)tagButton{
+- (void)tagButtonClick:(RoundTagButton *)tagButton{
     tagButton.selected = !tagButton.selected;
 }
 
 #pragma mark - 关注按钮点击
--(void)focusButtonClick:(UIButton *)btn{
+- (void)focusButtonClick:(UIButton *)btn{
     //关注操作
     if (self.focusButtonBlock) {
         self.focusButtonBlock();
@@ -151,7 +151,7 @@
 }
 
 //设置标签
--(void)setTagArray:(NSArray *)tagArray{
+- (void)setTagArray:(NSArray *)tagArray{
     
     for (UIView *subView in self.tagView.subviews) {
         [subView removeFromSuperview];

@@ -46,7 +46,7 @@
     [self.navigationItem setBackBarButtonItem:backItem];
 }
 
-- (void) backToLastController {
+- (void)backToLastController {
     
     [self.navigationController popViewControllerAnimated: YES];
     
@@ -54,13 +54,13 @@
 
 
 #pragma mark - Hud方法
-- (void) showHudWithMsg:(NSString *)msg{
+- (void)showHudWithMsg:(NSString *)msg{
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
 }
 
-- (void) hideHud{
+- (void)hideHud{
     
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
