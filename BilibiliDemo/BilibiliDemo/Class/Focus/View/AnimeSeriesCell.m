@@ -9,6 +9,7 @@
 #import "AnimeSeriesCell.h"
 #import "UIImageView+WebCache.h"
 #import "AnimeInfo.h"
+#import "UIView+MaskCorner.h"
 
 @interface AnimeSeriesCell ()
 
@@ -25,8 +26,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     UIColor *borderColor = kPinkColor;
-    self.followButton.layer.masksToBounds = YES;
+//    self.followButton.layer.masksToBounds = YES;
     self.followButton.layer.cornerRadius = 5;
+    [self.followButton cy_roundCornerMaskRadius:5 backgoundColor:[UIColor whiteColor]];
     self.followButton.layer.borderWidth = 1;
     self.followButton.layer.borderColor = borderColor.CGColor;
     [self.followButton setBackgroundImage:[AnimeSeriesCell imageWithColor:[UIColor whiteColor] size:self.followButton.bounds.size] forState:UIControlStateNormal];
