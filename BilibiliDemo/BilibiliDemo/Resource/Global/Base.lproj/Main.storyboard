@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -179,35 +180,6 @@
             </objects>
             <point key="canvasLocation" x="170" y="741"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Xe0-m7-XFp">
-            <objects>
-                <tableViewController id="gDJ-Dj-fLL" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2a3-Mm-JkP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BHd-mA-iKW">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BHd-mA-iKW" id="EdF-x7-S7A">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="gDJ-Dj-fLL" id="4Qt-Vn-pf1"/>
-                            <outlet property="delegate" destination="gDJ-Dj-fLL" id="3dc-OC-H9z"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="kbr-ce-mWW"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Yq-It-9je" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="162" y="1511"/>
-        </scene>
         <!--我的-->
         <scene sceneID="feF-9k-r5K">
             <objects>
@@ -218,12 +190,50 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="gDJ-Dj-fLL" kind="relationship" relationship="rootViewController" id="mEW-nN-80G"/>
+                        <segue destination="0U0-aq-EIb" kind="relationship" relationship="rootViewController" id="SmJ-cx-daJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZ7-Do-aiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-417" y="1506"/>
+        </scene>
+        <!--Mine View Controller-->
+        <scene sceneID="K5S-Cg-qCi">
+            <objects>
+                <viewController id="0U0-aq-EIb" customClass="MineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2R3-dE-72a"/>
+                        <viewControllerLayoutGuide type="bottom" id="7FX-HC-6uF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TSB-98-llX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Yfp-tc-l6T">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0U0-aq-EIb" id="LIB-ef-D4y"/>
+                                    <outlet property="delegate" destination="0U0-aq-EIb" id="48r-RG-5p0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yfp-tc-l6T" secondAttribute="trailing" id="0NR-O0-ky5"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Yfp-tc-l6T" secondAttribute="bottom" id="4dc-S7-VW4"/>
+                            <constraint firstItem="Yfp-tc-l6T" firstAttribute="top" secondItem="TSB-98-llX" secondAttribute="topMargin" id="DUn-Oc-A3R"/>
+                            <constraint firstItem="Yfp-tc-l6T" firstAttribute="leading" secondItem="TSB-98-llX" secondAttribute="leading" id="P9G-h3-cDT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aBt-Dv-Nte"/>
+                    <connections>
+                        <outlet property="tableView" destination="Yfp-tc-l6T" id="PQW-dI-NW6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxh-TX-VQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="1506"/>
         </scene>
         <!--发现-->
         <scene sceneID="YOg-bT-OPA">
