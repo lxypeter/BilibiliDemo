@@ -16,7 +16,7 @@
 
 @implementation CYTabBar
 
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         [self initView];
@@ -24,7 +24,7 @@
     return self;
 }
 
--(void)initView{
+- (void)initView{
     self.backgroundColor = [UIColor whiteColor];
     
     CGFloat border = (ScreenWidth - 50.0*4)/5;
@@ -94,7 +94,7 @@
 }
 
 #pragma mark - 点击事件
--(void)clickTabBarBtn:(UIButton *)btn{
+- (void)clickTabBarBtn:(UIButton *)btn{
     
     if(self.selectedBtn == btn) return;
     

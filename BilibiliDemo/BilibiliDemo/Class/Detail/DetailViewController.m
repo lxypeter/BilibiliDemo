@@ -19,25 +19,15 @@
 @interface DetailViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property (weak, nonatomic) IBOutlet UIView *menuView;
-
 @property (weak, nonatomic) IBOutlet UIView *videoView;
-
 @property (weak, nonatomic) IBOutlet UIImageView *videoCoverImageView;
-
 @property (weak, nonatomic) IBOutlet UIButton *videoPlayButton;
-
-@property (strong, nonatomic) UILabel *titleLabel;
-
-@property (strong, nonatomic) UIVisualEffectView *videoCoverImageBlurView;
-
 @property (weak, nonatomic) IBOutlet UIButton *briefButton;
-
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
-
 @property (strong, nonatomic) UIView *buttonSeletedBar;
-
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UIVisualEffectView *videoCoverImageBlurView;
 
 @end
 
@@ -51,7 +41,7 @@
     [self menuViewSetting];
 }
 
--(void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
     [[[self.navigationController.navigationBar subviews]objectAtIndex:0] setAlpha:0];
 }
 
@@ -91,7 +81,7 @@
 }
 
 #pragma mark - tableView设置
--(void)tableViewSetting{
+- (void)tableViewSetting{
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     CGFloat topViewHeight = kInitVideoViewHeight + kInitMenuViewHeight;
@@ -102,7 +92,7 @@
 }
 
 #pragma mark - videoView模糊层
--(void)imageBlurViewSetting{
+- (void)imageBlurViewSetting{
     
     UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
@@ -119,7 +109,7 @@
 }
 
 #pragma mark - menuView设置
--(void)menuViewSetting{
+- (void)menuViewSetting{
     self.menuView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.menuView.layer.borderWidth = 0.5;
     
@@ -134,11 +124,11 @@
 }
 
 #pragma mark - tableView代理
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 20;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *cellID = @"1";
     
@@ -154,7 +144,7 @@
 }
 
 #pragma mark - scrollView代理（顶部动画效果）
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     //偏移量
     CGFloat deltaY = scrollView.contentOffset.y + kInitVideoViewHeight +kInitMenuViewHeight;
@@ -221,7 +211,7 @@
     
 }
 
--(void)updateVideoViewHeight:(CGFloat)height buttonSize:(CGSize)size buttonRight:(CGFloat)right andBlurAlpha:(CGFloat)alpha{
+- (void)updateVideoViewHeight:(CGFloat)height buttonSize:(CGSize)size buttonRight:(CGFloat)right andBlurAlpha:(CGFloat)alpha{
     
     //调整磨砂透明度
     self.videoCoverImageBlurView.alpha = alpha;
@@ -243,7 +233,7 @@
 }
 
 #pragma mark - menuView点击事件
--(void)menuButtonClick:(UIButton *)btn{
+- (void)menuButtonClick:(UIButton *)btn{
     
     [UIView animateWithDuration:0.2 animations:^{
         CGRect temFrame = self.buttonSeletedBar.frame;
