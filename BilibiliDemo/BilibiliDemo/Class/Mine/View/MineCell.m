@@ -28,7 +28,7 @@
 - (void)setSelectionStyle:(UITableViewCellSelectionStyle)selectionStyle{
 }
 
--(void)setMineCellModel:(MineCellModel *)mineCellModel{
+- (void)setMineCellModel:(MineCellModel *)mineCellModel{
     _mineCellModel = mineCellModel;
     
     self.iconImageView.image = [UIImage imageNamed:mineCellModel.imageName];
