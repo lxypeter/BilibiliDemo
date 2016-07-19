@@ -11,12 +11,12 @@
 @class CYTabBar;
 @protocol CYTabBarDelegate <NSObject>
 
--(void)cyTabBar:(CYTabBar *)tabBar indexOfBtnClicked:(NSInteger)index;
+- (void)cyTabBar:(CYTabBar *)tabBar indexOfBtnClicked:(NSInteger)index;
 
 @end
 
 @interface CYTabBar : UIView
 
-@property (nonatomic,weak) id delegate;
+@property (nonatomic, weak) id<CYTabBarDelegate> delegate;
 
 @end

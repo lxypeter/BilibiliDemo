@@ -17,7 +17,7 @@
 
 @implementation CYTabBarController
 #pragma mark - 懒加载
--(CYTabBar *)cyTabBar{
+- (CYTabBar *)cyTabBar{
     if (!_cyTabBar) {
         _cyTabBar = [[CYTabBar alloc]initWithFrame:self.tabBar.bounds];
         _cyTabBar.delegate = self;
@@ -33,17 +33,17 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [self animationOfLaunch];
 }
 
 #pragma mark - 自定义TabBar回调
--(void)cyTabBar:(CYTabBar *)tabBar indexOfBtnClicked:(NSInteger)index{
+- (void)cyTabBar:(CYTabBar *)tabBar indexOfBtnClicked:(NSInteger)index{
     self.selectedIndex = index;
 }
 
 #pragma mark - APP启动动画
--(void)animationOfLaunch{
+- (void)animationOfLaunch{
     UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
     
     UIView *launchView = viewController.view;
